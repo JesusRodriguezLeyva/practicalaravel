@@ -304,7 +304,7 @@
         });
     </script>
 
-    <script src="{{ asset('js/app.js') }}"></script>
+    <script src="{{ url('js/app.js') }}?v={{ time() }}" defer></script>
 </head>
 
 <body>
