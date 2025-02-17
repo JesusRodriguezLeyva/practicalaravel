@@ -305,6 +305,8 @@
     </script>
 
     <script src="{{ asset('js/app.js') }}?v={{ time() }}" defer></script>
+    {{ dd(asset('js/app.js')) }}
+
 </head>
 
 <body>
