@@ -1,6 +1,6 @@
 <?php
 
-$port = getenv('PORT') ?: 8000;
+$port = getenv('PORT') ?: 80;
 
 if (php_sapi_name() == 'cli-server') {
     $url = parse_url($_SERVER['REQUEST_URI']);
