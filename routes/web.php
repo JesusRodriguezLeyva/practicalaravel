@@ -21,7 +21,7 @@ Route::get('/', function () {
 });
 
 Route::get('/app', function () {
-    return "<h5> Soy la vista APP desde web.php de routes </h5>";
+    return "Soy la vista APP desde web.php de routes";
 });
 
 Route::get("/decoraciones", [DecoracionController::class, "index"]);

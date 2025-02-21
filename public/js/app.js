@@ -1,3 +1,4 @@
+
 function activeMenuOption(href) {
     $(".app-menu .nav-link")
         .removeClass("active")
@@ -7,16 +8,17 @@ function activeMenuOption(href) {
         .addClass("active")
         .attr("aria-current", "page")
 }
+
 // Hay que modificarlo para el nombre de la aplicacion
 const app = angular.module("angularjsApp", ["ngRoute"])
-app.config(function ($routeProvider, $locationProvider,) {
+app.config(function ($routeProvider, $locationProvider) {
     $locationProvider.hashPrefix("")
 
     // y para las rutas
     $routeProvider
         .when("/", {
             templateUrl: "/app",
-            controller: "appCtrl"
+            controller: "welcomeCtrl"
         })
         .when("/decoraciones", {
             templateUrl: "/decoraciones",
@@ -39,8 +41,12 @@ app.run(["$rootScope", "$location", "$timeout", function ($rootScope, $location,
         $rootScope.angularjsHora = lxFechaHora.toFormat("hh:mm:ss a")
         $timeout(actualizarFechaHora, 1000)
     }
+
     $rootScope.slide = ""
+
     actualizarFechaHora()
+    activeMenuOption(location.hash)
+
     $rootScope.$on("$routeChangeSuccess", function (event, current, previous) {
         $("html").css("overflow-x", "hidden")
 
@@ -65,12 +71,21 @@ app.run(["$rootScope", "$location", "$timeout", function ($rootScope, $location,
         }
     })
 }])
+
 // Hay que modificarlo para los controladores
-app.controller("appCtrl", function () { });
-app.controller("decoracionesCtrl", function () { });
-app.controller("paquetesCtrl", function () { });
+app.controller("welcomeCtrl", function ($scope, $http) {
+    // alert("Hola, soy el controlador app")
+})
+app.controller("decoracionesCtrl", function ($scope, $http) {
+
+})
+app.controller("paquetesCtrl", function ($scope, $http) {
+
+})
+
 const DateTime = luxon.DateTime
 let lxFechaHora
+
 document.addEventListener("DOMContentLoaded", function (event) {
     const configFechaHora = {
         locale: "es",
@@ -82,6 +97,5 @@ document.addEventListener("DOMContentLoaded", function (event) {
         dateFormat: "Y-m-d",
         // time_24hr: false
     }
-
     activeMenuOption(location.hash)
 })

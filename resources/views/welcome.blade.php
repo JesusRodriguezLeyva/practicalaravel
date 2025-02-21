@@ -153,8 +153,8 @@
             let s = `<div class="modal fade" id="modal-message" tabindex="-1" role="dialog" aria-labelledby="modal-message-title" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered" role="document">
                     <div class="modal-content">
-                        <div class="modal-header ${a = a || ""}">
-                            <h5 class="modal-title" id="modal-message-title">${o = o || ""}</h5>
+                        <div class="modal-header ${a=a||""}">
+                            <h5 class="modal-title" id="modal-message-title">${o=o||""}</h5>
                             <button type="button" class="close btn-close" data-dismiss="modal" data-bs-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
@@ -315,14 +315,10 @@
         @{{ angularjsHora }}
     </div>
 
-
-
-
-
     <!-- rutas, solo cambiar el nombre no el "#/" -->
     <ul class="app-menu nav nav-underline justify-content-center">
         <li class="nav-item">
-            <a class="nav-link" href="#/">Inicio</a>
+            <a class="nav-link" href="#/app">Inicio</a>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="#/decoraciones">Decoraciones</a>
@@ -332,8 +328,7 @@
         </li>
     </ul>
 
-
-    <div id="appContent" class="app-content container p-3  <?php echo '{{ slide }}'; ?>  " ng-view></div>
+    <div id="appContent" class="app-content container p-3 @{{ slide }}" ng-view></div>
 
     <div class="app-float-button bg-body" style="z-index: 2; position: fixed; bottom: 5px; left: 5px; cursor: pointer;">
         <ul class="list-group list-group-horizontal">
