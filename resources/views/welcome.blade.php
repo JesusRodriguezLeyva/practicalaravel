@@ -328,6 +328,8 @@
         </li>
     </ul>
 
+    s
+
     <div id="appContent" class="app-content container p-3 @{{ slide }}" ng-view></div>
 
     <div class="app-float-button bg-body" style="z-index: 2; position: fixed; bottom: 5px; left: 5px; cursor: pointer;">
@@ -340,6 +342,9 @@
             </li>
             <li class="list-group-item" data-bs-theme-value="auto">
                 <i class="bi bi-circle-half"></i>
+            </li>
+            <li li class="list-group-item">
+                <button type="button" class="btn btn-primary" onclick="location.reload()">Actualizar</button>
             </li>
         </ul>
     </div>

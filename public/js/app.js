@@ -76,12 +76,8 @@ app.run(["$rootScope", "$location", "$timeout", function ($rootScope, $location,
 app.controller("welcomeCtrl", function ($scope, $http) {
     // alert("Hola, soy el controlador app")
 })
-app.controller("decoracionesCtrl", function ($scope, $http) {
-
-})
-app.controller("paquetesCtrl", function ($scope, $http) {
-
-})
+app.controller("decoracionesCtrl", function ($scope, $http) { })
+app.controller("paquetesCtrl", function ($scope, $http) { })
 
 const DateTime = luxon.DateTime
 let lxFechaHora
