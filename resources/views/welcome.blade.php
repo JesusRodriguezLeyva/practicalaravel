@@ -328,8 +328,6 @@
         </li>
     </ul>
 
-    s
-
     <div id="appContent" class="app-content container p-3 @{{ slide }}" ng-view></div>
 
     <div class="app-float-button bg-body" style="z-index: 2; position: fixed; bottom: 5px; left: 5px; cursor: pointer;">
